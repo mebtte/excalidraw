@@ -21,7 +21,7 @@
   "dependencies": {
     "@dwelle/browser-fs-access": "0.21.3",
     "@sentry/browser": "6.2.5",
-    "@sentry/integrations": "6.2.5",
+    "@sentry/integrations": "6.13.3",
     "@testing-library/jest-dom": "5.11.10",
     "@testing-library/react": "11.2.6",
     "@tldraw/vec": "0.0.106",
