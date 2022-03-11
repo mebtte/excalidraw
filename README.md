@@ -2,10 +2,22 @@
 
 什么是 [Excalidraw](https://github.com/excalidraw/excalidraw) ?
 
-本项目在 `Excalidraw` 的基础上支持了中文字体:
+> 如果想查看之前替换字体自定义部署的方式, 请查看[这里](https://github.com/mebtte/excalidraw/tree/7921cb44aaeb9da94d49d371d645510b1e99572c)
 
-![](./cn_screenshot.png)
+Excalidraw 手写字体只支持英文, 不支持中文.
 
-> [https://excalidraw.mebtte.com](https://excalidraw.mebtte.com/) 部署在 Github Pages, 中文字体偏大, 加载可能缓慢或者失败.
+手写字体文件是通过网络加载的, 所以可以通过劫持字体文件请求然后改写到自己的字体链接, 就可以达到替换字体的目的.
 
-如果想更换字体, TTF 格式直接覆盖 `public/chinese.ttf`. 其他格式将字体文件放置 `public` 目录下, 然后将 `public/index.html`/`public/font.css` 中的 `chinese.ttf` 替换成新的字体文件名, 编译部署即可.
+![](./font_request.png)
+
+通过浏览器的 Network 面板可以找到`手写字体`的请求是 `https://excalidraw.com/Virgil.woff2`.
+
+改写浏览器请求可以通过 [XSwitch](https://chrome.google.com/webstore/detail/xswitch/idkjhjggpffolpidfkikidcokdkdaogg) 插件.
+
+之后将想要的字体托管为静态资源(或者本地部署), 在 XSwitch 中添加 `proxy` 配置将 Excalidraw 的手写字体链接替换成自己的字体链接:
+
+![](./xswitch.png)
+
+启用 XSwitch 然后刷新 Excalidraw, 可以发现自定义字体已生效:
+
+![](./screenshot.png)
