@@ -18,6 +18,10 @@ Excalidraw 手写字体只支持英文, 不支持中文.
 
 ![](./xswitch.png)
 
+> 上面的字体链接只是展示, 请替换成自己的字体链接
+
 启用 XSwitch 然后刷新 Excalidraw, 可以发现自定义字体已生效:
 
 ![](./screenshot.png)
+
+如果没有生效, 可以清空缓存再进行刷新.
