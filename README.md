@@ -14,14 +14,16 @@ Excalidraw 手写字体只支持英文, 不支持中文.
 
 改写浏览器请求可以通过 [XSwitch](https://chrome.google.com/webstore/detail/xswitch/idkjhjggpffolpidfkikidcokdkdaogg) 插件.
 
+> XSwitch 疑似已停止维护, 可以改用 [Requestly](https://requestly.io), 登录账号情况下可以在多台设备同步数据.
+
 之后将想要的字体托管为静态资源(或者本地部署), 在 XSwitch 中添加 `proxy` 配置将 Excalidraw 的手写字体链接替换成自己的字体链接:
 
 ![](./xswitch.png)
 
-> 上面的字体链接只是展示, 请替换成自己的字体链接
+> 上面的字体链接只用于演示, 请替换成自己的字体链接
 
 启用 XSwitch 然后刷新 Excalidraw, 可以发现自定义字体已生效:
 
 ![](./screenshot.png)
 
-如果没有生效, 可以清空缓存再进行刷新.
+如果没有生效, 可以清空缓存( Chrome Devtools --> Application --> Storage --> Clear Site Data )再进行刷新.
